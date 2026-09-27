@@ -1,935 +1,850 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SecureTech - Jasa Instalasi CCTV & Access Door</title>
-
-    <meta name="description"
-        content="Jasa instalasi CCTV dan Access Door profesional untuk rumah, kantor, toko, gudang, dan perusahaan.">
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            color: #222;
-            background: #f5f7fa;
-        }
-
-        /* =========================
-           NAVBAR
-        ========================== */
-
-        nav {
-            background: #0b1f33;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 7%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .logo span {
-            color: #19b5fe;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #19b5fe;
-        }
-
-        /* =========================
-           HERO
-        ========================== */
-
-        .hero {
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            padding: 80px 7%;
-            color: white;
-
-            background:
-                linear-gradient(
-                    rgba(5, 20, 35, 0.82),
-                    rgba(5, 20, 35, 0.82)
-                ),
-                url("https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=80");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .hero-content {
-            max-width: 750px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span {
-            color: #19b5fe;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            color: #e8eef5;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        .btn-primary {
-            background: #19b5fe;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #0d91cf;
-        }
-
-        .btn-outline {
-            border: 2px solid white;
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: white;
-            color: #0b1f33;
-        }
-
-        /* =========================
-           GENERAL SECTION
-        ========================== */
-
-        section {
-            padding: 80px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 35px;
-            color: #0b1f33;
-            margin-bottom: 10px;
-        }
-
-        .section-title p {
-            color: #666;
-        }
-
-        /* =========================
-           SERVICES
-        ========================== */
-
-        .services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .service-icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        .service-card h3 {
-            color: #0b1f33;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            color: #666;
-        }
-
-        /* =========================
-           KEUNGGULAN
-        ========================== */
-
-        .advantages {
-            background: #0b1f33;
-            color: white;
-        }
-
-        .advantages .section-title h2 {
-            color: white;
-        }
-
-        .advantage-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .advantage {
-            text-align: center;
-            padding: 25px;
-        }
-
-        .advantage-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-
-        .advantage h3 {
-            margin-bottom: 10px;
-        }
-
-        .advantage p {
-            color: #ccd7e2;
-            font-size: 14px;
-        }
-
-        /* =========================
-           ABOUT
-        ========================== */
-
-        .about {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-image img {
-            width: 100%;
-            border-radius: 12px;
-        }
-
-        .about-text h2 {
-            color: #0b1f33;
-            font-size: 35px;
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        /* =========================
-           PAKET
-        ========================== */
-
-        .packages {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .package {
-            background: white;
-            padding: 35px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .package h3 {
-            color: #0b1f33;
-            font-size: 23px;
-        }
-
-        .package .price {
-            font-size: 30px;
-            font-weight: bold;
-            color: #19b5fe;
-            margin: 20px 0;
-        }
-
-        .package ul {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 25px;
-        }
-
-        .package ul li {
-            margin-bottom: 10px;
-        }
-
-        /* =========================
-           GALLERY
-        ========================== */
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        /* =========================
-           CONTACT
-        ========================== */
-
-        .contact {
-            background: #eaf1f7;
-        }
-
-        .contact-box {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .contact-box h2 {
-            color: #0b1f33;
-            margin-bottom: 15px;
-        }
-
-        .contact-info {
-            margin: 25px 0;
-            font-size: 18px;
-        }
-
-        /* =========================
-           FOOTER
-        ========================== */
-
-        footer {
-            background: #061522;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
-
-        footer p {
-            color: #b8c4cf;
-        }
-
-        /* =========================
-           WHATSAPP FLOATING BUTTON
-        ========================== */
-
-        .whatsapp {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            text-decoration: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            z-index: 999;
-        }
-
-        /* =========================
-           RESPONSIVE
-        ========================== */
-
-        @media (max-width: 900px) {
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            .services {
-                grid-template-columns: 1fr;
-            }
-
-            .advantage-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about {
-                grid-template-columns: 1fr;
-            }
-
-            .packages {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-        @media (max-width: 600px) {
-
-            nav {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav ul {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero {
-                min-height: 550px;
-                padding: 60px 6%;
-            }
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            section {
-                padding: 60px 6%;
-            }
-
-            .advantage-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Padlock System Solution | CCTV & Access Door</title>
+  <meta name="description" content="Padlock System Solution menyediakan jasa instalasi CCTV, Access Door, maintenance, dan solusi keamanan untuk rumah, kantor, toko, gudang, sekolah, dan perusahaan di Jabodetabek.">
+  <meta name="keywords" content="jasa CCTV, instalasi CCTV, access door, access control, maintenance CCTV, Jabodetabek, Padlock System Solution">
+  <meta name="author" content="Padlock System Solution">
+  <meta name="theme-color" content="#071a2b">
+
+  <style>
+    :root {
+      --navy:#071a2b;
+      --navy-2:#0b2740;
+      --blue:#12aef3;
+      --blue-dark:#0788c5;
+      --white:#fff;
+      --text:#17212b;
+      --muted:#657382;
+      --light:#f4f8fb;
+      --border:#e3ebf2;
+      --shadow:0 15px 45px rgba(7,26,43,.10);
+      --radius:18px;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+
+    body {
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+
+    a { color:inherit; }
+    img { max-width:100%; display:block; }
+
+    .container { width:min(1140px,92%); margin:auto; }
+
+    /* NAVBAR */
+    nav {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(7,26,43,.96);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-inner {
+      min-height:74px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .logo {
+      text-decoration:none;
+      color:#fff;
+      font-size:22px;
+      font-weight:800;
+      letter-spacing:-.5px;
+      white-space:nowrap;
+    }
+
+    .logo span { color:var(--blue); }
+
+    .nav-links {
+      display:flex;
+      list-style:none;
+      gap:28px;
+      align-items:center;
+    }
+
+    .nav-links a {
+      color:#dfeaf3;
+      text-decoration:none;
+      font-size:14px;
+      font-weight:700;
+      transition:.25s;
+    }
+
+    .nav-links a:hover { color:var(--blue); }
+
+    .nav-cta {
+      background:var(--blue);
+      color:#fff !important;
+      padding:10px 17px;
+      border-radius:9px;
+    }
+
+    .nav-cta:hover { background:var(--blue-dark); }
+
+    .menu-toggle {
+      display:none;
+      border:0;
+      background:none;
+      color:#fff;
+      font-size:28px;
+      cursor:pointer;
+    }
+
+    /* HERO */
+    .hero {
+      min-height:calc(100vh - 74px);
+      display:flex;
+      align-items:center;
+      position:relative;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(4,17,29,.94) 0%,rgba(4,17,29,.78) 52%,rgba(4,17,29,.52) 100%),
+        url("https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1800&q=85");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero::after {
+      content:"";
+      position:absolute;
+      inset:auto 0 0;
+      height:120px;
+      background:linear-gradient(transparent,#fff);
+      opacity:.12;
+    }
+
+    .hero-content { max-width:760px; position:relative; z-index:1; padding:90px 0; }
+
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      color:#a9e3ff;
+      font-size:13px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      margin-bottom:18px;
+    }
+
+    .eyebrow::before {
+      content:"";
+      width:30px;
+      height:2px;
+      background:var(--blue);
+    }
+
+    .hero h1 {
+      font-size:clamp(40px,6vw,70px);
+      line-height:1.05;
+      letter-spacing:-2px;
+      margin-bottom:22px;
+    }
+
+    .hero h1 span { color:var(--blue); }
+
+    .hero p {
+      max-width:690px;
+      color:#dbe7ef;
+      font-size:19px;
+      margin-bottom:30px;
+    }
+
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; }
+
+    .btn {
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      gap:8px;
+      padding:14px 22px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:15px;
+      border:2px solid transparent;
+      transition:.25s;
+    }
+
+    .btn-primary { background:var(--blue); color:#fff; }
+    .btn-primary:hover { background:var(--blue-dark); transform:translateY(-2px); }
+
+    .btn-outline { border-color:rgba(255,255,255,.6); color:#fff; }
+    .btn-outline:hover { background:#fff; color:var(--navy); }
+
+    .hero-badges {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:38px;
+    }
+
+    .badge {
+      padding:9px 13px;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      border-radius:999px;
+      color:#dcebf4;
+      font-size:13px;
+    }
+
+    /* SECTIONS */
+    section { padding:90px 0; }
+
+    .section-heading {
+      max-width:720px;
+      margin:0 auto 50px;
+      text-align:center;
+    }
+
+    .section-heading .label {
+      color:var(--blue-dark);
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+
+    .section-heading h2 {
+      color:var(--navy);
+      font-size:clamp(30px,4vw,43px);
+      line-height:1.15;
+      margin:8px 0 14px;
+      letter-spacing:-1px;
+    }
+
+    .section-heading p { color:var(--muted); }
+
+    /* SERVICES */
+    .services {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .card {
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:0 5px 25px rgba(7,26,43,.05);
+      transition:.3s;
+    }
+
+    .card:hover { transform:translateY(-7px); box-shadow:var(--shadow); }
+
+    .icon {
+      width:54px;
+      height:54px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:#e8f7ff;
+      font-size:27px;
+      margin-bottom:20px;
+    }
+
+    .card h3 { color:var(--navy); margin-bottom:9px; font-size:19px; }
+    .card p { color:var(--muted); font-size:14px; }
+
+    /* ADVANTAGES */
+    .dark-section { background:var(--navy); color:#fff; }
+
+    .dark-section .section-heading h2 { color:#fff; }
+    .dark-section .section-heading p { color:#afc1d0; }
+
+    .adv-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .adv {
+      padding:28px 20px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,.1);
+      background:rgba(255,255,255,.035);
+      border-radius:16px;
+    }
+
+    .adv .icon { margin:0 auto 16px; background:rgba(18,174,243,.13); }
+    .adv h3 { margin-bottom:8px; font-size:17px; }
+    .adv p { color:#b8c8d5; font-size:13px; }
+
+    /* ABOUT */
+    .about {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:65px;
+      align-items:center;
+    }
+
+    .about-image { position:relative; }
+    .about-image img {
+      width:100%;
+      height:500px;
+      object-fit:cover;
+      border-radius:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .experience {
+      position:absolute;
+      right:-20px;
+      bottom:25px;
+      background:#fff;
+      padding:20px 25px;
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+
+    .experience strong { display:block; color:var(--blue-dark); font-size:28px; }
+    .experience span { font-size:12px; color:var(--muted); }
+
+    .about-text h2 {
+      font-size:clamp(30px,4vw,42px);
+      color:var(--navy);
+      line-height:1.15;
+      margin:8px 0 20px;
+    }
+
+    .about-text p { color:var(--muted); margin-bottom:15px; }
+
+    .check-list { list-style:none; margin:25px 0; }
+    .check-list li { margin:11px 0; font-weight:700; }
+    .check-list li::before { content:"✓"; color:var(--blue); font-weight:900; margin-right:10px; }
+
+    /* PACKAGES */
+    .packages {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .package {
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:32px;
+      box-shadow:0 7px 28px rgba(7,26,43,.06);
+      position:relative;
+    }
+
+    .package.featured { border:2px solid var(--blue); transform:translateY(-8px); }
+
+    .popular {
+      position:absolute;
+      right:18px;
+      top:18px;
+      background:var(--blue);
+      color:#fff;
+      font-size:11px;
+      font-weight:900;
+      padding:5px 9px;
+      border-radius:999px;
+    }
+
+    .package h3 { color:var(--navy); font-size:21px; }
+    .price { font-size:28px; font-weight:900; color:var(--blue-dark); margin:17px 0 22px; }
+    .package ul { list-style:none; color:var(--muted); margin-bottom:25px; }
+    .package li { margin:10px 0; font-size:14px; }
+    .package li::before { content:"✓"; color:var(--blue-dark); font-weight:900; margin-right:8px; }
+
+    /* GALLERY */
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .gallery-item {
+      overflow:hidden;
+      border-radius:16px;
+      height:260px;
+      background:#ddd;
+    }
+
+    .gallery-item img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.5s;
+    }
+
+    .gallery-item:hover img { transform:scale(1.06); }
+
+    /* CTA */
+    .cta {
+      background:linear-gradient(135deg,var(--navy),var(--navy-2));
+      color:#fff;
+      border-radius:25px;
+      padding:55px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:30px;
+    }
+
+    .cta h2 { font-size:clamp(28px,4vw,40px); line-height:1.15; margin-bottom:10px; }
+    .cta p { color:#b9cad7; max-width:650px; }
+
+    /* CONTACT */
+    .contact-section { background:var(--light); }
+
+    .contact-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:25px;
+    }
+
+    .contact-card {
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:35px;
+    }
+
+    .contact-card h3 { color:var(--navy); margin-bottom:18px; }
+
+    .contact-item {
+      display:flex;
+      gap:14px;
+      margin:18px 0;
+      align-items:flex-start;
+    }
+
+    .contact-item b { display:block; color:var(--navy); }
+    .contact-item span { color:var(--muted); font-size:14px; }
+
+    /* FOOTER */
+    footer { background:#04111d; color:#fff; padding:35px 0; }
+    .footer-inner {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+
+    footer p { color:#93a6b6; font-size:13px; }
+
+    /* FLOATING WHATSAPP */
+    .whatsapp {
+      position:fixed;
+      width:61px;
+      height:61px;
+      right:22px;
+      bottom:22px;
+      z-index:999;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:#25d366;
+      color:#fff;
+      text-decoration:none;
+      font-size:28px;
+      box-shadow:0 10px 25px rgba(0,0,0,.25);
+      transition:.25s;
+    }
+
+    .whatsapp:hover { transform:scale(1.08); }
+
+    /* RESPONSIVE */
+    @media(max-width:1000px) {
+      .services { grid-template-columns:repeat(2,1fr); }
+      .adv-grid { grid-template-columns:repeat(2,1fr); }
+      .about { gap:35px; }
+    }
+
+    @media(max-width:760px) {
+      .menu-toggle { display:block; }
+      .nav-links {
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        top:74px;
+        background:var(--navy);
+        padding:18px 6%;
+        flex-direction:column;
+        align-items:stretch;
+        gap:5px;
+        box-shadow:0 15px 30px rgba(0,0,0,.2);
+      }
+
+      .nav-links.active { display:flex; }
+      .nav-links a { display:block; padding:12px; }
+      .nav-cta { text-align:center; }
+
+      .hero { min-height:720px; }
+      .hero p { font-size:17px; }
+
+      .about,
+      .packages,
+      .contact-grid { grid-template-columns:1fr; }
+
+      .about-image img { height:370px; }
+      .experience { right:15px; }
+
+      .gallery { grid-template-columns:1fr; }
+      .gallery-item { height:250px; }
+
+      .cta {
+        padding:35px 25px;
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .footer-inner { flex-direction:column; text-align:center; }
+    }
+
+    @media(max-width:520px) {
+      section { padding:70px 0; }
+      .services, .adv-grid { grid-template-columns:1fr; }
+      .hero h1 { letter-spacing:-1px; }
+      .hero-content { padding:65px 0; }
+      .card, .package, .contact-card { padding:25px; }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-     NAVBAR
-========================== -->
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="#home">Padlock<span> System Solution</span></a>
 
-<nav>
+      <button class="menu-toggle" aria-label="Buka menu" onclick="toggleMenu()">☰</button>
 
-    <div class="logo">
-        Secure<span>Tech</span>
-    </div>
-
-    <ul>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#layanan">Layanan</a></li>
         <li><a href="#tentang">Tentang</a></li>
         <li><a href="#paket">Paket</a></li>
+        <li><a href="#galeri">Galeri</a></li>
         <li><a href="#kontak">Kontak</a></li>
-    </ul>
+        <li><a class="nav-cta" href="https://wa.me/6281556600651?text=Halo%20Padlock%20System%20Solution%2C%20saya%20ingin%20konsultasi%20CCTV%20%2F%20Access%20Door." target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+  </nav>
 
-</nav>
+  <main>
 
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="eyebrow">Security System Specialist</div>
 
-<!-- =========================
-     HERO
-========================== -->
-
-<section class="hero" id="home">
-
-    <div class="hero-content">
-
-        <h1>
-            Jasa Instalasi
+          <h1>
+            Solusi Keamanan<br>
             <span>CCTV & Access Door</span>
-        </h1>
+          </h1>
 
-        <p>
-            Solusi keamanan profesional untuk rumah,
-            kantor, toko, gudang, sekolah, dan perusahaan.
-        </p>
+          <p>
+            Jasa instalasi, maintenance, dan troubleshooting sistem keamanan
+            untuk rumah, kantor, toko, gudang, sekolah, dan perusahaan.
+          </p>
 
-        <a
-            href="https://wa.me/6281234567890"
-            class="btn btn-primary"
-            target="_blank">
-            Konsultasi WhatsApp
-        </a>
+          <div class="buttons">
+            <a class="btn btn-primary" href="https://wa.me/6281556600651?text=Halo%20Padlock%20System%20Solution%2C%20saya%20ingin%20konsultasi%20tentang%20instalasi%20CCTV%20%2F%20Access%20Door." target="_blank" rel="noopener">
+              💬 Konsultasi WhatsApp
+            </a>
+            <a class="btn btn-outline" href="#layanan">Lihat Layanan →</a>
+          </div>
 
-        <a
-            href="#layanan"
-            class="btn btn-outline">
-            Lihat Layanan
-        </a>
+          <div class="hero-badges">
+            <span class="badge">✓ Instalasi Profesional</span>
+            <span class="badge">✓ Support & Maintenance</span>
+            <span class="badge">✓ Area Jabodetabek</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    </div>
+    <section id="layanan">
+      <div class="container">
+        <div class="section-heading">
+          <div class="label">Layanan</div>
+          <h2>Solusi Keamanan untuk Kebutuhan Anda</h2>
+          <p>Kami membantu merancang, memasang, dan merawat sistem keamanan sesuai kebutuhan lokasi.</p>
+        </div>
 
-</section>
-
-
-<!-- =========================
-     LAYANAN
-========================== -->
-
-<section id="layanan">
-
-    <div class="section-title">
-
-        <h2>Layanan Kami</h2>
-
-        <p>
-            Kami menyediakan berbagai solusi keamanan
-            untuk kebutuhan Anda.
-        </p>
-
-    </div>
-
-
-    <div class="services">
-
-        <div class="service-card">
-
-            <div class="service-icon">📹</div>
-
+        <div class="services">
+          <article class="card">
+            <div class="icon">📹</div>
             <h3>Instalasi CCTV</h3>
+            <p>Pemasangan CCTV indoor maupun outdoor, termasuk penarikan kabel, konfigurasi DVR/NVR, dan akses monitoring.</p>
+          </article>
 
-            <p>
-                Pemasangan CCTV untuk rumah, kantor,
-                toko, gudang, sekolah, dan area usaha.
-            </p>
+          <article class="card">
+            <div class="icon">🔐</div>
+            <h3>Access Door</h3>
+            <p>Instalasi access control dengan RFID, fingerprint, PIN, magnetic lock, exit button, dan perangkat pendukung.</p>
+          </article>
 
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">🔐</div>
-
-            <h3>Instalasi Access Door</h3>
-
-            <p>
-                Instalasi sistem akses pintu menggunakan
-                kartu, fingerprint, password, atau sistem
-                kontrol akses lainnya.
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">🛠️</div>
-
+          <article class="card">
+            <div class="icon">🛠️</div>
             <h3>Maintenance CCTV</h3>
+            <p>Pengecekan kamera, DVR/NVR, harddisk, koneksi, kabel, power supply, serta troubleshooting sistem.</p>
+          </article>
 
-            <p>
-                Perawatan, pengecekan, troubleshooting,
-                dan perbaikan sistem CCTV.
-            </p>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">⚙️</div>
-
+          <article class="card">
+            <div class="icon">⚙️</div>
             <h3>Maintenance Access Door</h3>
+            <p>Pemeriksaan controller, reader, magnetic lock, power supply, tombol exit, dan sistem akses pintu.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <p>
-                Pemeriksaan dan perbaikan sistem access
-                door agar tetap bekerja dengan optimal.
-            </p>
-
+    <section class="dark-section">
+      <div class="container">
+        <div class="section-heading">
+          <div class="label" style="color:#67cdfb;">Keunggulan</div>
+          <h2>Mengapa Memilih Padlock?</h2>
+          <p>Fokus pada instalasi yang rapi, fungsi sistem, dan dukungan setelah pemasangan.</p>
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- =========================
-     KEUNGGULAN
-========================== -->
-
-<section class="advantages">
-
-    <div class="section-title">
-
-        <h2>Mengapa Memilih Kami?</h2>
-
-        <p>
-            Kami mengutamakan kualitas pemasangan
-            dan kepuasan pelanggan.
-        </p>
-
-    </div>
-
-
-    <div class="advantage-grid">
-
-        <div class="advantage">
-
-            <div class="advantage-icon">👨‍🔧</div>
-
+        <div class="adv-grid">
+          <div class="adv">
+            <div class="icon">👨‍🔧</div>
             <h3>Teknisi Berpengalaman</h3>
+            <p>Penanganan instalasi dan troubleshooting sistem keamanan.</p>
+          </div>
 
-            <p>
-                Didukung teknisi yang berpengalaman
-                dalam instalasi sistem keamanan.
-            </p>
+          <div class="adv">
+            <div class="icon">📐</div>
+            <h3>Instalasi Rapi</h3>
+            <p>Penataan kabel dan perangkat diperhatikan sejak proses pemasangan.</p>
+          </div>
 
+          <div class="adv">
+            <div class="icon">💰</div>
+            <h3>Solusi Fleksibel</h3>
+            <p>Pilihan perangkat dan konfigurasi dapat disesuaikan kebutuhan.</p>
+          </div>
+
+          <div class="adv">
+            <div class="icon">📞</div>
+            <h3>After Sales Support</h3>
+            <p>Konsultasi dan bantuan troubleshooting setelah instalasi.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-
-        <div class="advantage">
-
-            <div class="advantage-icon">⭐</div>
-
-            <h3>Kualitas Terjamin</h3>
-
-            <p>
-                Mengutamakan hasil instalasi yang
-                rapi dan dapat digunakan dengan baik.
-            </p>
-
-        </div>
-
-
-        <div class="advantage">
-
-            <div class="advantage-icon">💰</div>
-
-            <h3>Harga Kompetitif</h3>
-
-            <p>
-                Menawarkan solusi keamanan dengan
-                harga yang sesuai kebutuhan.
-            </p>
-
-        </div>
-
-
-        <div class="advantage">
-
-            <div class="advantage-icon">📞</div>
-
-            <h3>Support</h3>
-
-            <p>
-                Siap membantu konsultasi dan
-                troubleshooting setelah pemasangan.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     TENTANG
-========================== -->
-
-<section id="tentang">
-
-    <div class="about">
-
+    <section id="tentang">
+      <div class="container about">
         <div class="about-image">
-
-            <img
-                src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1000&q=80"
-                alt="Instalasi CCTV">
-
+          <img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1100&q=85" alt="Instalasi sistem keamanan CCTV" loading="lazy">
+          <div class="experience">
+            <strong>24/7</strong>
+            <span>Monitoring & Support</span>
+          </div>
         </div>
-
 
         <div class="about-text">
+          <div class="label" style="color:#0788c5;font-size:12px;font-weight:900;letter-spacing:1.5px;">TENTANG KAMI</div>
+          <h2>Padlock System Solution</h2>
 
-            <h2>Tentang Kami</h2>
+          <p>
+            Padlock System Solution menyediakan jasa instalasi dan maintenance
+            sistem keamanan untuk kebutuhan rumah, kantor, toko, gudang,
+            sekolah, dan perusahaan.
+          </p>
 
-            <p>
-                Padlock adalah penyedia jasa instalasi
-                sistem keamanan yang melayani pemasangan
-                CCTV dan Access Door.
-            </p>
+          <p>
+            Kami membantu pelanggan dari tahap konsultasi, pemilihan solusi,
+            instalasi, konfigurasi hingga troubleshooting.
+          </p>
 
-            <p>
-                Kami membantu pelanggan mendapatkan sistem
-                keamanan yang sesuai dengan kebutuhan rumah,
-                kantor, toko, gudang maupun perusahaan.
-            </p>
+          <ul class="check-list">
+            <li>Instalasi CCTV & DVR/NVR</li>
+            <li>Access Control & Magnetic Lock</li>
+            <li>Perawatan dan troubleshooting</li>
+            <li>Konsultasi kebutuhan sistem keamanan</li>
+          </ul>
 
-            <p>
-                Dari konsultasi, pemasangan hingga
-                maintenance, kami siap memberikan solusi
-                keamanan yang praktis dan profesional.
-            </p>
+          <a class="btn btn-primary" href="https://wa.me/6281556600651?text=Halo%20Padlock%20System%20Solution%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener">Konsultasi Sekarang →</a>
+        </div>
+      </div>
+    </section>
 
+    <section id="paket" style="background:var(--light);">
+      <div class="container">
+        <div class="section-heading">
+          <div class="label">Paket</div>
+          <h2>Paket Layanan</h2>
+          <p>Harga di bawah merupakan contoh paket dan dapat disesuaikan berdasarkan survey serta kebutuhan lokasi.</p>
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PAKET
-========================== -->
-
-<section id="paket">
-
-    <div class="section-title">
-
-        <h2>Paket Layanan</h2>
-
-        <p>
-            Contoh paket pemasangan yang dapat disesuaikan
-            dengan kebutuhan Anda.
-        </p>
-
-    </div>
-
-
-    <div class="packages">
-
-
-        <div class="package">
-
-            <h3>Paket CCTV Basic</h3>
-
-            <div class="price">
-                Mulai Rp 1.500.000
-            </div>
-
+        <div class="packages">
+          <article class="package">
+            <h3>CCTV Basic</h3>
+            <div class="price">Mulai Rp 1,5 Jt</div>
             <ul>
-                <li>✓ 2 Kamera CCTV</li>
-                <li>✓ DVR</li>
-                <li>✓ Harddisk</li>
-                <li>✓ Kabel & Connector</li>
-                <li>✓ Instalasi</li>
+              <li>2 Kamera CCTV</li>
+              <li>DVR</li>
+              <li>Harddisk</li>
+              <li>Kabel & Connector</li>
+              <li>Instalasi & konfigurasi</li>
             </ul>
+            <a class="btn btn-primary" href="https://wa.me/6281556600651?text=Halo%2C%20saya%20tertarik%20Paket%20CCTV%20Basic." target="_blank" rel="noopener">Tanya Paket</a>
+          </article>
 
-            <a
-                href="https://wa.me/6281234567890"
-                class="btn btn-primary"
-                target="_blank">
-                Tanya Sekarang
-            </a>
-
-        </div>
-
-
-        <div class="package">
-
-            <h3>Paket CCTV Pro</h3>
-
-            <div class="price">
-                Mulai Rp 2.500.000
-            </div>
-
+          <article class="package featured">
+            <span class="popular">POPULER</span>
+            <h3>CCTV Pro</h3>
+            <div class="price">Mulai Rp 2,5 Jt</div>
             <ul>
-                <li>✓ 4 Kamera CCTV</li>
-                <li>✓ DVR</li>
-                <li>✓ Harddisk</li>
-                <li>✓ Kabel & Connector</li>
-                <li>✓ Instalasi</li>
+              <li>4 Kamera CCTV</li>
+              <li>DVR</li>
+              <li>Harddisk</li>
+              <li>Kabel & Connector</li>
+              <li>Instalasi & konfigurasi</li>
             </ul>
+            <a class="btn btn-primary" href="https://wa.me/6281556600651?text=Halo%2C%20saya%20tertarik%20Paket%20CCTV%20Pro." target="_blank" rel="noopener">Tanya Paket</a>
+          </article>
 
-            <a
-                href="https://wa.me/6281234567890"
-                class="btn btn-primary"
-                target="_blank">
-                Tanya Sekarang
-            </a>
-
-        </div>
-
-
-        <div class="package">
-
+          <article class="package">
             <h3>Access Door</h3>
+            <div class="price">Mulai Rp 1,8 Jt</div>
+            <ul>
+              <li>Access Controller</li>
+              <li>RFID / Fingerprint</li>
+              <li>Magnetic Lock</li>
+              <li>Exit Button</li>
+              <li>Instalasi & konfigurasi</li>
+            </ul>
+            <a class="btn btn-primary" href="https://wa.me/6281556600651?text=Halo%2C%20saya%20tertarik%20Paket%20Access%20Door." target="_blank" rel="noopener">Tanya Paket</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <div class="price">
-                Mulai Rp 1.800.000
+    <section id="galeri">
+      <div class="container">
+        <div class="section-heading">
+          <div class="label">Portfolio</div>
+          <h2>Galeri Instalasi</h2>
+          <p>Ganti foto di bawah dengan dokumentasi pekerjaan Padlock System Solution untuk menampilkan portfolio asli.</p>
+        </div>
+
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=1000&q=85" alt="Perangkat CCTV" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1000&q=85" alt="Teknisi instalasi" loading="lazy">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=85" alt="Sistem keamanan dan jaringan" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>Butuh solusi CCTV atau Access Door?</h2>
+            <p>Hubungi kami untuk konsultasi kebutuhan, estimasi perangkat, dan penawaran pemasangan.</p>
+          </div>
+          <a class="btn btn-primary" href="https://wa.me/6281556600651?text=Halo%20Padlock%20System%20Solution%2C%20saya%20ingin%20meminta%20konsultasi%20dan%20penawaran." target="_blank" rel="noopener">💬 Hubungi Kami</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontak">
+      <div class="container">
+        <div class="section-heading">
+          <div class="label">Kontak</div>
+          <h2>Hubungi Padlock System Solution</h2>
+          <p>Kami siap membantu kebutuhan instalasi dan maintenance sistem keamanan Anda.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Informasi Kontak</h3>
+
+            <div class="contact-item">
+              <div>📱</div>
+              <div><b>WhatsApp</b><span>0815-5660-0651</span></div>
             </div>
 
-            <ul>
-                <li>✓ Access Controller</li>
-                <li>✓ RFID / Fingerprint</li>
-                <li>✓ Magnetic Lock</li>
-                <li>✓ Exit Button</li>
-                <li>✓ Instalasi</li>
+            <div class="contact-item">
+              <div>📧</div>
+              <div><b>Email</b><span>padlocksystemsolution@gmail.com</span></div>
+            </div>
+
+            <div class="contact-item">
+              <div>📍</div>
+              <div><b>Area Layanan</b><span>Jabodetabek dan sekitarnya</span></div>
+            </div>
+
+            <a class="btn btn-primary" href="mailto:padlocksystemsolution@gmail.com">✉ Kirim Email</a>
+          </div>
+
+          <div class="contact-card">
+            <h3>Konsultasi Cepat</h3>
+            <p style="color:var(--muted);margin-bottom:20px;">
+              Klik tombol WhatsApp dan kirimkan informasi lokasi serta kebutuhan
+              CCTV atau Access Door Anda.
+            </p>
+
+            <ul class="check-list">
+              <li>Survey kebutuhan</li>
+              <li>Rekomendasi perangkat</li>
+              <li>Estimasi pekerjaan</li>
+              <li>Penawaran pemasangan</li>
             </ul>
 
-            <a
-                href="https://wa.me/6281234567890"
-                class="btn btn-primary"
-                target="_blank">
-                Tanya Sekarang
-            </a>
-
+            <a class="btn btn-primary" href="https://wa.me/6281556600651?text=Halo%20Padlock%20System%20Solution.%0A%0ANama%3A%0ALokasi%3A%0AKebutuhan%3A%0A%0EMohon%20dibantu%20untuk%20konsultasi." target="_blank" rel="noopener">💬 Chat WhatsApp</a>
+          </div>
         </div>
+      </div>
+    </section>
 
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <div class="logo">Padlock<span> System Solution</span></div>
+        <p>Jasa Instalasi CCTV & Access Door</p>
+      </div>
+      <p>© 2026 Padlock System Solution. All rights reserved.</p>
     </div>
+  </footer>
 
-</section>
+  <a class="whatsapp" href="https://wa.me/6281556600651?text=Halo%20Padlock%20System%20Solution%2C%20saya%20ingin%20konsultasi." target="_blank" rel="noopener" aria-label="Chat WhatsApp" title="Chat WhatsApp">☏</a>
 
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
 
-<!-- =========================
-     GALERI
-========================== -->
-
-<section>
-
-    <div class="section-title">
-
-        <h2>Galeri Instalasi</h2>
-
-        <p>
-            Contoh pekerjaan instalasi sistem keamanan.
-        </p>
-
-    </div>
-
-
-    <div class="gallery">
-
-        <img
-            src="https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=800&q=80"
-            alt="CCTV">
-
-        <img
-            src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80"
-            alt="Teknisi">
-
-        <img
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80"
-            alt="Server dan keamanan">
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     KONTAK
-========================== -->
-
-<section class="contact" id="kontak">
-
-    <div class="contact-box">
-
-        <h2>Butuh CCTV atau Access Door?</h2>
-
-        <p>
-            Konsultasikan kebutuhan sistem keamanan
-            Anda dengan kami.
-        </p>
-
-
-        <div class="contact-info">
-
-            <p>📱 WhatsApp: 0815-5660-0651</p>
-
-            <p>📧 Email: padlocksystemsolution@gmail.com</p>
-
-            <p>📍 Melayani area Jabodetabek</p>
-
-        </div>
-
-
-        <a
-            href="https://wa.me/6281556600651"
-            class="btn btn-primary"
-            target="_blank">
-
-            💬 Hubungi Kami via WhatsApp
-
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================== -->
-
-<footer>
-
-    <p>
-        © 2026 Padlock System Solution. 
-    </p>
-
-    <p>
-        Jasa Instalasi CCTV & Access Door
-    </p>
-
-</footer>
-
-
-<!-- =========================
-     WHATSAPP BUTTON
-========================== -->
-
-<a
-    href="https://wa.me/6281234567890"
-    class="whatsapp"
-    target="_blank"
-    title="Chat WhatsApp">
-
-    ☎
-
-</a>
-
+    document.querySelectorAll("#navLinks a").forEach(function(link) {
+      link.addEventListener("click", function() {
+        document.getElementById("navLinks").classList.remove("active");
+      });
+    });
+  </script>
 
 </body>
 </html>
